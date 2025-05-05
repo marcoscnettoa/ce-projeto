@@ -1,0 +1,3835 @@
+{
+    "id": "32673",
+    "modules": [
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "fields": [
+            ],
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Cadastros"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "disabled": false,
+                    "name": "Dados do Cliente",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "conditional_color": true,
+                    "conditional_color_field": "CNPJ do Cliente",
+                    "disabled": true,
+                    "name": "Código do Cliente",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "cnpj",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "CNPJ do Cliente",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "cnpj",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "CPF do Cliente",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "cpf"
+                },
+                {
+                    "name": "Inscrição Estadual/RG",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Nome do Cliente",
+                    "options": [
+                    ],
+                    "size": "7",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Fantasia",
+                    "options": [
+                    ],
+                    "size": "5",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "E-mail",
+                    "options": [
+                    ],
+                    "size": "6",
+                    "type": "text"
+                },
+                {
+                    "name": "Observação",
+                    "size": "12",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Telefone 1",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "telefone",
+                    "whatsapp": true
+                },
+                {
+                    "name": "Telefone 2",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "telefone"
+                },
+                {
+                    "disabled": false,
+                    "name": "Endereço do Cliente",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "name": "CEP do Cliente",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "cep"
+                },
+                {
+                    "name": "Endereço",
+                    "options": [
+                    ],
+                    "size": "7",
+                    "type": "text"
+                },
+                {
+                    "name": "Número:",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "name": "Complemento",
+                    "options": [
+                    ],
+                    "size": "8",
+                    "type": "text"
+                },
+                {
+                    "name": "Bairro",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Cidade",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "name": "Estado",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "name": "Ponto de Referência",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "disabled": false,
+                    "name": "Anexos",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "multiple": true,
+                    "name": "Documentos",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "file",
+                    "value": null
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-user",
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "ready": true,
+            "title": "Clientes"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Companhia",
+                    "options": [
+                    ],
+                    "type": "text"
+                }
+            ],
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Companhias"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultOrderField": "0",
+            "defaultOrderFieldValue": "asc",
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Fornecedor",
+                    "options": [
+                    ],
+                    "type": "text"
+                }
+            ],
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Fornecedores"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Produto",
+                    "options": [
+                    ],
+                    "type": "text"
+                }
+            ],
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Produtos"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Serviço",
+                    "options": [
+                    ],
+                    "type": "text"
+                }
+            ],
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Serviços"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Trechos",
+                    "options": [
+                    ],
+                    "type": "text"
+                }
+            ],
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Trechos"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "disabled": false,
+                    "name": "Dados do Passageiro",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Nome",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "cpf",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "CPF",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "cpf",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "E-mail",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "email",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "telefone",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Telefone",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "telefone",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "telefone",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Telefone 2",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "telefone",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Passaporte",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-user",
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Passageiro"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "disabled": false,
+                    "name": "Dados do Vendedor",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "name": "Código do Vendedor",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Nome do Vendedor",
+                    "options": [
+                    ],
+                    "size": "7",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "CPF",
+                    "exibeFiltros": true,
+                    "name": "CPF do Vendedor",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "cpf"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "E-mail",
+                    "exibeFiltros": true,
+                    "name": "E-mail do  vendedor",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Telefone",
+                    "exibeFiltros": true,
+                    "name": "Telefone 1",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "telefone",
+                    "whatsapp": true
+                },
+                {
+                    "name": "Observação",
+                    "size": "12",
+                    "type": "text"
+                },
+                {
+                    "disabled": false,
+                    "name": "Endereço do Vendedor",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "CEP",
+                    "name": "CEP do Vendedor",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "cep"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Endereço",
+                    "name": "Endereço d  Vendedor",
+                    "options": [
+                    ],
+                    "size": "7",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Número",
+                    "name": "Número do Endereço do vendedor",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Complemento",
+                    "name": "Complemento do vendedor",
+                    "options": [
+                    ],
+                    "size": "8",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Bairro",
+                    "name": "Bairro do Vendedor",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Cidade",
+                    "name": "Cidade do Vendedor",
+                    "options": [
+                    ],
+                    "size": "5",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Estado",
+                    "name": "Estado do Vendedor",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-user",
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "ready": true,
+            "title": "Vendedores"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "disabled": false,
+                    "name": "BANDEIRA DO CARTÃO:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Visa:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "checkbox",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Mastercard:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "checkbox",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Diners:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "checkbox",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Outros",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "checkbox",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "DADOS DO CARTÃO:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "text",
+                    "disabled": false,
+                    "name": "Número do Cartão:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "sum": false,
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Código de Verificação:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "class": "data",
+                    "disabled": false,
+                    "name": "Data de Validade Cartão:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Nome do Titular:",
+                    "options": [
+                    ],
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "text",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "CPF:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "class": "telefone",
+                    "disabled": false,
+                    "name": "Nro do Telefone do Responsável:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "telefone",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "VALORES E CONDIÇÕES:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Valor Total:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Nro de Parcelas:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "class": "calculo",
+                    "decimals": 2,
+                    "disabled": false,
+                    "expression": "COL13 / COL14",
+                    "name": "Valor da Parcela:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "calculo",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "IMPORTANTE:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "name": "Esta autorização destina-se ao pagamento em nome de:",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "class": "telefone",
+                    "disabled": false,
+                    "name": "Nro. Telefone Passageiro:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "telefone",
+                    "value": null
+                },
+                {
+                    "name": "Cia Aérea:",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "class": "data",
+                    "disabled": false,
+                    "name": "Data de Embarque:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "name": "Destino:",
+                    "options": [
+                    ],
+                    "size": "6",
+                    "type": "text"
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-credit-card",
+            "import_enable_btns": true,
+            "javascript": "$(`\n\t#input_valor_total_,\n\t#input_nro_de_parcelas_\n`)\n.on('change keyup',function(){\n\tvenda_calculo_total();\n});\nfunction venda_calculo_total(){\n\tconsole.log('foi');\n\tlet valor_total_ \t \t= parseFloat(($(\"#input_valor_total_\").val()!=\"\")?$(\"#input_valor_total_\").val():0);\n\tlet nro_de_parcelas_    = parseFloat(($(\"#input_nro_de_parcelas_\").val()!=\"\")?$(\"#input_nro_de_parcelas_\").val():0);\n\tlet valor_da_parcela_ \t= 0;\n\tif(valor_total_ > 0 && nro_de_parcelas_ > 0){\n\t\tvalor_da_parcela_   = (valor_total_ / nro_de_parcelas_);\n\t}\n\t$(\"#input_valor_da_parcela_\").val(valor_da_parcela_.toFixed(2));\n}",
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "CCF Cartão de Crédito"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "fields": [
+            ],
+            "glyphicon": "glyphicon glyphicon-usd",
+            "menu": false,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Financeiro"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null,
+                    "value_add": "INSERT INTO fluxo_de_caixa(data_do_recebimento, movimentacao, total_a_pagar, valor_recebido, data_atual, saldo_da_transacao, ghost_camp)\n\nSELECT data_do_recebimento, 'Entrada', '0', valor_recebido, CURRENT_DATE(),valor_recebido, ' ===> '\nFROM contas_a_receber\nWHERE  id = '$contas_a_receber->id' AND status = 1;",
+                    "value_delete": "INSERT INTO fluxo_de_caixa(data_do_recebimento, movimentacao, total_a_pagar, valor_recebido, data_atual, saldo_da_transacao, ghost_camp)\n\nSELECT data_do_recebimento, 'Entrada', '0', valor_recebido, CURRENT_DATE(),valor_recebido, ' ===> '\nFROM contas_a_receber\nWHERE  id = '$contas_a_receber->id' AND status = 1;",
+                    "value_edit": "INSERT INTO fluxo_de_caixa(data_do_recebimento, movimentacao, total_a_pagar, valor_recebido, data_atual, saldo_da_transacao, ghost_camp)\n\nSELECT data_do_recebimento, 'Entrada', '0', valor_recebido, CURRENT_DATE(),valor_recebido, ' ===> '\nFROM contas_a_receber\nWHERE  id = '$contas_a_receber->id' AND status = 1;"
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "description": "Nome da empresa",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Empresa",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Cadastro de Empresas",
+                    "relationship_reference": "Nome Fantasia  Empresa",
+                    "size": "4",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "description": "Nome do Cliente",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Cliente",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Clientes",
+                    "relationship_reference": "Nome do Cliente",
+                    "size": "4",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Tipo de documento",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "N° do documento",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "description": "Nome do Vendedor",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Vendedor",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Vendedores",
+                    "relationship_reference": "Nome do Vendedor",
+                    "size": "4",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "text",
+                    "description": "Motivo do Recebimento",
+                    "disabled": false,
+                    "name": "Descrição do Recebimento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "8",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "data",
+                    "description": "Vencimento",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data do Vencimento",
+                    "note": null,
+                    "operatorfield": false,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Valor à Receber",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "sum": true,
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Tipo do valor",
+                    "note": null,
+                    "options": [
+                        "Valor Total",
+                        "Parcelas"
+                    ],
+                    "size": "2",
+                    "type": "selectbox",
+                    "value": null
+                },
+                {
+                    "actions_advanced": false,
+                    "class": "text",
+                    "conditional": true,
+                    "conditional_field": "Tipo do valor",
+                    "conditional_field_value": "Parcelas",
+                    "disabled": false,
+                    "name": "Parcelas",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "conditional": true,
+                    "conditional_field": "Tipo do valor",
+                    "conditional_field_value": "Parcelas",
+                    "disabled": false,
+                    "name": "N° de Parcelas",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "data",
+                    "conditional": true,
+                    "conditional_field": "Tipo do valor",
+                    "conditional_field_value": "Parcelas",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Primeira Data",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Recepção",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "data",
+                    "description": "Envio da Cobrança",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data do Recebimento",
+                    "note": null,
+                    "operatorfield": false,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Valor Recebido",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Forma de pagamento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Formas de Pagamentos",
+                    "relationship_reference": "Forma de pagamento",
+                    "size": "2",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Status",
+                    "note": null,
+                    "options": [
+                        "Pago",
+                        "Aguardando Comprovante",
+                        "Negociando",
+                        "Pendente"
+                    ],
+                    "size": "3",
+                    "type": "selectbox",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Comprovante",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "file",
+                    "value": null
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-download",
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Contas a Receber"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null,
+                    "value_add": "INSERT INTO fluxo_de_caixa(data_do_recebimento, movimentacao, total_a_pagar, valor_recebido, data_atual, saldo_da_transacao, ghost_camp)\n\nSELECT data_do_vencimento, 'Saída', valor_pago, '0', CURRENT_DATE(), -valor_pago, ' ===> '\nFROM contas_a_pagar\nWHERE  id = '$contas_a_pagar->id' AND status = 1;",
+                    "value_delete": "INSERT INTO fluxo_de_caixa(data_do_recebimento, movimentacao, total_a_pagar, valor_recebido, data_atual, saldo_da_transacao, ghost_camp)\n\nSELECT data_do_vencimento, 'Saída', valor_pago, '0', CURRENT_DATE(), -valor_pago, ' ===> '\nFROM contas_a_pagar\nWHERE  id = '$contas_a_pagar->id' AND status = 1;",
+                    "value_edit": "INSERT INTO fluxo_de_caixa(data_do_recebimento, movimentacao, total_a_pagar, valor_recebido, data_atual, saldo_da_transacao, ghost_camp)\n\nSELECT data_do_vencimento, 'Saída', valor_pago, '0', CURRENT_DATE(), -valor_pago, ' ===> '\nFROM contas_a_pagar\nWHERE  id = '$contas_a_pagar->id' AND status = 1;"
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "alias": "Empresa",
+                    "description": "Nome da Empresa",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Referente à",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Cadastro de Empresas",
+                    "relationship_reference": "Nome Fantasia  Empresa",
+                    "size": "4",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "text",
+                    "description": "Nome do Fornecedor",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Fornecedor",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Fornecedores",
+                    "relationship_reference": "Fornecedor",
+                    "size": "4",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "name": "Tipo de documento",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "N° do documento",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "name": "Portador",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "text",
+                    "description": "Motivo do Pagamento",
+                    "disabled": false,
+                    "name": "Descrição do Pagamento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "N° da ordem de compra",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-calendar",
+                    "class": "data",
+                    "description": "Vencimento",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data do Vencimento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Valor à Pagar",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "sum": true,
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Tipo do valor",
+                    "note": null,
+                    "options": [
+                        "Valor Total",
+                        "Parcelas"
+                    ],
+                    "size": "2",
+                    "type": "selectbox",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "text",
+                    "conditional": true,
+                    "conditional_field": "Tipo do valor",
+                    "conditional_field_value": "Parcelas",
+                    "disabled": false,
+                    "name": "Parcelas",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-sort-by-order",
+                    "conditional": true,
+                    "conditional_field": "Tipo do valor",
+                    "conditional_field_value": "Parcelas",
+                    "disabled": false,
+                    "name": "N° de Parcelas",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-calendar",
+                    "class": "data",
+                    "conditional": true,
+                    "conditional_field": "Tipo do valor",
+                    "conditional_field_value": "Parcelas",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Primeira Data",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Recepção",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "data",
+                    "description": "Envio da Cobrança",
+                    "disabled": false,
+                    "name": "Data do Pagamento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Valor Pago",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "buttonGlyphicon": "glyphicon glyphicon-briefcase",
+                    "disabled": false,
+                    "name": "Forma de pagamento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Formas de Pagamentos",
+                    "relationship_reference": "Forma de pagamento",
+                    "size": "2",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "buttonGlyphicon": "glyphicon glyphicon-hourglass",
+                    "disabled": false,
+                    "name": "Status",
+                    "note": null,
+                    "options": [
+                        "Pago",
+                        "Aguardando Comprovante",
+                        "Negociando",
+                        "Pendente"
+                    ],
+                    "size": "3",
+                    "type": "selectbox",
+                    "value": null
+                },
+                {
+                    "buttonGlyphicon": "glyphicon glyphicon-hdd",
+                    "disabled": false,
+                    "name": "Comprovante de Pagamento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "file",
+                    "value": null
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-upload",
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Contas a Pagar"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": true,
+                        "delete": false,
+                        "edit": true
+                    },
+                    "type": "query",
+                    "value": null,
+                    "value_add": null,
+                    "value_edit": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "alias": "Saldo do dia",
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "hidden_add": true,
+                    "hidden_edit": true,
+                    "hidden_view": true,
+                    "name": "Saldo Inicial",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "sum": true,
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": null,
+                    "class": "text",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Movimentação",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship_reference": "Nome da Empresa",
+                    "size": "10",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Recebimentos",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-calendar",
+                    "class": "data",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "hidden_add": true,
+                    "hidden_edit": true,
+                    "hidden_view": true,
+                    "name": "Data do Recebimento",
+                    "note": null,
+                    "operatorfield": false,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Valor Recebido",
+                    "note": null,
+                    "operatorfield": false,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "sum": true,
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Pagamentos",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-calendar",
+                    "class": "data",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "hidden_add": true,
+                    "hidden_edit": true,
+                    "hidden_view": true,
+                    "name": "Data do Pagamento",
+                    "note": null,
+                    "operatorfield": false,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Total a Pagar",
+                    "note": null,
+                    "operatorfield": false,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "sum": true,
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Total",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-calendar",
+                    "class": "data",
+                    "disabled": true,
+                    "exibeFiltros": true,
+                    "hidden_add": true,
+                    "hidden_edit": true,
+                    "name": "Data Atual",
+                    "note": null,
+                    "operatorfield": true,
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "data",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Calculando",
+                    "class": "calculo",
+                    "disabled": true,
+                    "dsfooter": "Saldo Final  ->",
+                    "hidden_add": true,
+                    "hidden_edit": true,
+                    "name": "Ghost camp",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "calculo",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "calculo",
+                    "decimals": 2,
+                    "disabled": false,
+                    "expression": "COL4 - COL7",
+                    "hidden_add": true,
+                    "hidden_edit": true,
+                    "name": "Saldo da Transação",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "4",
+                    "sum": true,
+                    "type": "calculo",
+                    "value": null
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-signal",
+            "import_enable_btns": true,
+            "menu": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Fluxo de caixa"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null,
+                    "value_add": null,
+                    "value_edit": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null,
+                    "value_add": "UPDATE \nvendas \nSET \nfaturamento  = NULL,\nfoi_faturado = NULL,\ntemplate \t = 2\nWHERE\ntipo_de_venda = 1;\n\nUPDATE \nvendas \nSET \ntemplate \t = NULL\nWHERE\ntipo_de_venda = 2;",
+                    "value_edit": "UPDATE \nvendas \nSET \nfaturamento  = NULL,\nfoi_faturado = NULL,\ntemplate \t = 2\nWHERE\ntipo_de_venda = 1;\n\nUPDATE \nvendas \nSET \ntemplate \t = NULL\nWHERE\ntipo_de_venda = 2;"
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultOrderFieldValue": "asc",
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-star",
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Tipo de Venda",
+                    "note": null,
+                    "options": [
+                        "Recibo",
+                        "Faturamento"
+                    ],
+                    "size": "3",
+                    "type": "selectbox",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "N° da Fatura",
+                    "buttonGlyphicon": "glyphicon glyphicon-pencil",
+                    "conditional_color": false,
+                    "conditional_color_field": "Faturamento",
+                    "conditional_color_value": "#ff0000",
+                    "disabled": true,
+                    "exibeFiltros": true,
+                    "name": "Faturamento",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Foi Faturado?",
+                    "buttonGlyphicon": "glyphicon glyphicon-ok-circle",
+                    "conditional_color": true,
+                    "conditional_color_field": "Foi Faturado",
+                    "conditional_color_field_value": "Sim",
+                    "conditional_color_value": "#00b73d",
+                    "disabled": true,
+                    "hidden_view": true,
+                    "name": "Foi Faturado",
+                    "note": null,
+                    "options": [
+                        "Sim",
+                        "Não"
+                    ],
+                    "size": "3",
+                    "type": "selectbox",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "INFORMAÇÕES DA VENDA:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Número",
+                    "disabled": true,
+                    "name": "Id",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "actions_advanced": false,
+                    "buttonGlyphicon": "glyphicon glyphicon-calendar",
+                    "class": "date",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data",
+                    "note": null,
+                    "operatorfield": true,
+                    "options": [
+                    ],
+                    "required": false,
+                    "size": "2",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "text",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Cliente",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Clientes",
+                    "relationship_reference": "Nome do Cliente",
+                    "size": "4",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Vendedor",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Vendedores",
+                    "relationship_reference": "Nome do Vendedor",
+                    "size": "3",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-search",
+                    "exibeFiltros": true,
+                    "inputToLower": true,
+                    "name": "Localizador",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Produto",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Produtos",
+                    "relationship_reference": "Produto",
+                    "size": "3",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Serviço",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Serviços",
+                    "relationship_reference": "Serviço",
+                    "size": "2",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Fornecedor",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Fornecedores",
+                    "relationship_reference": "Fornecedor",
+                    "size": "3",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "checkSubrelationship": false,
+                    "class": "text",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "multiple": false,
+                    "name": "Companhia",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Companhias",
+                    "relationship_reference": "Companhia",
+                    "size": "3",
+                    "subrelationship": "Cliente:",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "class": "text",
+                    "disabled": false,
+                    "name": "Trecho",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Trechos",
+                    "relationship_reference": "Trechos",
+                    "size": "4",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Dt. Embarque",
+                    "class": "date",
+                    "disabled": false,
+                    "name": "Data Embarque",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Dt. Retorno",
+                    "class": "date",
+                    "disabled": false,
+                    "name": "Data Retorno",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "hidden_view": false,
+                    "name": "Passageiros",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship_grid": "Grid Passageiros",
+                    "type": "grid",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Tarifa",
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "expression": null,
+                    "name": "Valor Tarifa",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "sum": false,
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Tx. Embarque",
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Tx. Embarque",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Outras Taxas",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Desconto",
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Desconto",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Comissão (DU)",
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Comissão",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Incentivo",
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Incentivo",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "class": "calculo",
+                    "decimals": 2,
+                    "disabled": true,
+                    "expression": "COL17 + COL18 + COL19 - COL20 + COL21",
+                    "name": "Valor Total",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "calculo",
+                    "value": 0
+                },
+                {
+                    "name": "OBSERVACÕES DA VENDA:",
+                    "options": [
+                    ],
+                    "type": "text"
+                },
+                {
+                    "disabled": false,
+                    "name": "FORMAS DE PAGAMENTO:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-usd",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "hidden_view": false,
+                    "name": "Forma de Pgto",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship_grid": "Grid Pagamentos",
+                    "relationship_reference": "Forma de pagamento",
+                    "size": "12",
+                    "type": "grid",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "PGTO AO FORNECEDOR",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "class": "date",
+                    "disabled": false,
+                    "name": "Dt. Pgto:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "class": "text",
+                    "disabled": false,
+                    "name": "Nr. Documento:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "money",
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Valor:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "money",
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Acréscimo:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "money",
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Desconto:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "class": "calculo",
+                    "disabled": false,
+                    "expression": "COL29 + COL30 - COL31",
+                    "name": "Vlr Pago:",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "calculo",
+                    "value": null
+                },
+                {
+                    "name": "OBSERVAÇÕES:",
+                    "options": [
+                    ],
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Template",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Templates",
+                    "relationship_reference": "Nome do Template",
+                    "type": "select",
+                    "value": null
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-tags",
+            "import_enable_btns": true,
+            "javascript": "$(\"select#input_tipo_de_venda\").closest(\".form-group\").addClass('inpsel-destaque-st1');\n$(\n\t`#input_valor_tarifa,\n\t#input_tx_embarque,\n\t#input_outras_taxas,\n\t#input_desconto,\n\t#input_comissao`\n)\n.on('change keyup',function(){\n\tvenda_calculo_total();\n});\nfunction venda_calculo_total(){\n\tconsole.log('foi');\n\tlet valor_tarifa  = parseFloat(($(\"#input_valor_tarifa\").val()!=\"\")?$(\"#input_valor_tarifa\").val():0);\n\tlet tx_embarque   = parseFloat(($(\"#input_tx_embarque\").val()!=\"\")?$(\"#input_tx_embarque\").val():0);\n\tlet outras_taxas  = parseFloat(($(\"#input_outras_taxas\").val()!=\"\")?$(\"#input_outras_taxas\").val():0);\n\tlet desconto  \t  = parseFloat(($(\"#input_desconto\").val()!=\"\")?$(\"#input_desconto\").val():0);\n\tlet comissao  \t  = parseFloat(($(\"#input_comissao\").val()!=\"\")?$(\"#input_comissao\").val():0);\n\tlet valor_total   = ((valor_tarifa + tx_embarque + outras_taxas + comissao) - desconto);\n\t$(\"#input_valor_total\").val(valor_total.toFixed(2));\n}",
+            "menu": false,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Vendas"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null,
+                    "value_add": "UPDATE \nvendas \nSET \nfaturamento  = NULL,\nfoi_faturado = NULL\nWHERE\ntipo_de_venda = 2 AND\nfaturamento   = LPAD($faturamento->id,7,'0');\n\nUPDATE \nvendas \nSET \nfaturamento  = LPAD($faturamento->id,7,'0'),\nfoi_faturado = 1\nWHERE\ntipo_de_venda = 2 AND\n$faturamento->cliente IS NOT NULL AND\n$faturamento->data_inicial IS NOT NULL AND\n$faturamento->data_final IS NOT NULL AND\nvendas.faturamento IS NULL AND\n(vendas.foi_faturado IS NULL || vendas.foi_faturado = '0') AND\nvendas.cliente = $faturamento->cliente AND\nDATE_FORMAT(vendas.data, '%Y-%m-%d') BETWEEN '$faturamento->data_inicial' AND '$faturamento->data_final';\n\nUPDATE \nfaturamento \nSET \ntemplate \t     = 3,\nn_da_fatura   = LPAD($faturamento->id,7,'0')\nWHERE\nid = $faturamento->id;",
+                    "value_delete": "UPDATE \nvendas \nSET \nfaturamento \t= NULL,\nfoi_faturado  = NULL\nWHERE\ntipo_de_venda = 2 AND\nfaturamento   = LPAD($faturamento->id,7,'0');",
+                    "value_edit": "UPDATE \nvendas \nSET \nfaturamento  = NULL,\nfoi_faturado = NULL\nWHERE\ntipo_de_venda = 2 AND\nfaturamento   = LPAD($faturamento->id,7,'0');\n\nUPDATE \nvendas \nSET \nfaturamento \t= LPAD($faturamento->id,7,'0'),\nfoi_faturado    = 1 \nWHERE\ntipo_de_venda = 2 AND\n$faturamento->cliente IS NOT NULL AND\n$faturamento->data_inicial IS NOT NULL AND\n$faturamento->data_final IS NOT NULL AND\nvendas.faturamento IS NULL AND\n(vendas.foi_faturado IS NULL || vendas.foi_faturado = '0') AND\nvendas.cliente = $faturamento->cliente AND\nDATE_FORMAT(vendas.data, '%Y-%m-%d') BETWEEN '$faturamento->data_inicial' AND '$faturamento->data_final';\n\nUPDATE \nfaturamento \nSET \ntemplate \t     = 3,\nn_da_fatura   = LPAD($faturamento->id,7,'0')\nWHERE\nid = $faturamento->id;"
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "alias": null,
+                    "disabled": true,
+                    "exibeFiltros": true,
+                    "name": "N° da Fatura",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "date",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data da Fatura",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "date",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data de Vencimento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "actions_advanced": false,
+                    "disabled": false,
+                    "name": "Lançamento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "checkSubrelationship": false,
+                    "class": "datetime",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Cliente",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Clientes",
+                    "relationship_reference": "Nome do Cliente",
+                    "size": "4",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "date",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data Inicial",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "date",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data Final",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Template",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Templates",
+                    "relationship_reference": "Nome do Template",
+                    "type": "select",
+                    "value": null
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-scissors",
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Faturamento"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Forma de pagamento",
+                    "options": [
+                    ],
+                    "type": "text"
+                }
+            ],
+            "import_enable_btns": true,
+            "menu": false,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Formas de Pagamentos"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "disabled": false,
+                    "name": "Logotipo Empresa",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "file",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Dados da Empresa",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Codigo Empresa",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Nome da Empresa",
+                    "options": [
+                    ],
+                    "size": "10",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "N° Junta Comercial",
+                    "name": "NJuntaComercial Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "class": "text",
+                    "disabled": false,
+                    "name": "Perfil Fiscal",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship_reference": "Perfil Fiscal",
+                    "size": "3",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Nome Fantasia",
+                    "class": "text",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Nome Fantasia  Empresa",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "6",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "CNPJ",
+                    "exibeFiltros": true,
+                    "name": "CNPJ da Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "cnpj"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "inputMask": true,
+                    "inputMaskValue": "99.999.999-9",
+                    "name": "Inscrição Estadual",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Email",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Email Empresa",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "6",
+                    "type": "email",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Dados de Endereço",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "CEP",
+                    "name": "CEP Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "cep"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Endereço",
+                    "name": "Endereço Empresa",
+                    "options": [
+                    ],
+                    "size": "7",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Número",
+                    "name": "Número Empresa",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Bairro",
+                    "name": "Bairro Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "País",
+                    "name": "Pais Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "UF",
+                    "exibeFiltros": true,
+                    "name": "UF Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Cidade",
+                    "exibeFiltros": true,
+                    "name": "Cidade Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "disabled": false,
+                    "name": "Dados para Contato",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Telefone",
+                    "exibeFiltros": true,
+                    "name": "Telefone Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "telefone"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Fax",
+                    "name": "Fax Empresa",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "telefone"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "Site",
+                    "name": "Site Empresa",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "alias": "NRE",
+                    "name": "NRE Empresa",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "class": "text",
+                    "disabled": false,
+                    "name": "Segmento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "12",
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Comércio",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "checkbox",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Serviço",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "checkbox",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Indústria",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "checkbox",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "Importador",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "checkbox",
+                    "value": null
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-file",
+            "import_enable_btns": true,
+            "menu": false,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "ready": true,
+            "title": "Cadastro de Empresas"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "export_enable_btns": true,
+            "export_options_size": "custom",
+            "export_options_size_height": 3000,
+            "export_options_size_width": 3000,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Número",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "buttonGlyphicon": "glyphicon glyphicon-calendar",
+                    "class": "date",
+                    "conditional": false,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Data",
+                    "note": null,
+                    "operatorfield": true,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Clilente",
+                    "options": [
+                    ],
+                    "size": "5",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Vendedor",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "exibeFiltros": true,
+                    "name": "Produto",
+                    "options": [
+                    ],
+                    "type": "text"
+                },
+                {
+                    "buttonGlyphicon": "glyphicon glyphicon-calendar",
+                    "class": "date",
+                    "disabled": false,
+                    "name": "Período de",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "class": "date",
+                    "disabled": false,
+                    "name": "A",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "date",
+                    "value": null
+                },
+                {
+                    "name": "Viajantes",
+                    "options": [
+                    ],
+                    "size": "4",
+                    "type": "text"
+                },
+                {
+                    "name": "Crianças",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "name": "Idade",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "disabled": false,
+                    "name": "MALAS DESPACHADAS",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "name": "Inclui",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text",
+                    "value": null
+                },
+                {
+                    "name": "Não inclui",
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "text"
+                },
+                {
+                    "disabled": false,
+                    "name": "VALOR POR PASSAGEIRO",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                },
+                {
+                    "name": "Passageiros",
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "text"
+                },
+                {
+                    "disabled": false,
+                    "name": "Quantidade",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "number",
+                    "value": null
+                },
+                {
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Valor por pessoa",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "class": "money",
+                    "disabled": false,
+                    "name": "Valor total",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "3",
+                    "type": "money",
+                    "value": null
+                },
+                {
+                    "disabled": false,
+                    "name": "OUTROS SERVIÇOS",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "section",
+                    "value": null
+                }
+            ],
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Orçamentos"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "actions_enable_btns": true,
+            "defaultPositionActions": "left",
+            "fields": [
+                {
+                    "name": "Nome do Template",
+                    "options": [
+                    ],
+                    "type": "text"
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "html",
+                    "disabled": false,
+                    "hidden_view": true,
+                    "name": "Template",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "html",
+                    "value": null
+                }
+            ],
+            "glyphicon": "glyphicon glyphicon-list-alt",
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Templates"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "checkSubrelationship": false,
+                    "class": "text",
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "hidden_view": false,
+                    "inputToLower": true,
+                    "name": "Passageiros",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Passageiro",
+                    "relationship_reference": "Nome",
+                    "size": "3",
+                    "type": "select",
+                    "value": null
+                }
+            ],
+            "grid": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Grid Passageiros"
+        },
+        {
+            "actions": [
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "sendmail",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "query",
+                    "value": null
+                },
+                {
+                    "functions": {
+                        "add": false,
+                        "delete": false,
+                        "edit": false
+                    },
+                    "type": "webhook",
+                    "value": null
+                }
+            ],
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "exibeFiltros": true,
+                    "name": "Forma de Pagamento",
+                    "note": null,
+                    "options": [
+                    ],
+                    "relationship": "Formas de Pagamentos",
+                    "relationship_reference": "Forma de pagamento",
+                    "size": "3",
+                    "type": "select",
+                    "value": null
+                },
+                {
+                    "actions_advanced": true,
+                    "class": "money",
+                    "disabled": false,
+                    "exibeFiltros": false,
+                    "hidden_view": false,
+                    "name": "Valor Pago",
+                    "note": null,
+                    "options": [
+                    ],
+                    "size": "2",
+                    "type": "money",
+                    "value": null
+                }
+            ],
+            "grid": true,
+            "messages": [
+                {
+                    "error": "Erro ao realizar cadastro!",
+                    "success": "Cadastro realizado com sucesso!",
+                    "type": "add"
+                },
+                {
+                    "error": "Erro ao atualizar registro!",
+                    "success": "Registro atualizado com sucesso!",
+                    "type": "edit"
+                },
+                {
+                    "error": "Erro ao excluir registro!",
+                    "success": "Registro excluído com sucesso!",
+                    "type": "delete"
+                }
+            ],
+            "title": "Grid Pagamentos"
+        },
+        {
+            "actions_advanced": true,
+            "clean_title": "documentos",
+            "disabled": false,
+            "fields": [
+                {
+                    "actions_advanced": true,
+                    "disabled": false,
+                    "multiple": true,
+                    "name": "Documentos",
+                    "note": null,
+                    "options": [
+                    ],
+                    "type": "file",
+                    "value": null
+                }
+            ],
+            "ignore_mode_list": true,
+            "multiple": true,
+            "note": null,
+            "r_title": "r_clientes",
+            "title": "r_clientes_documentos",
+            "value": null
+        },
+        {
+            "fields": false,
+            "fixed_module": true,
+            "glyphicon": "glyphicon glyphicon-calendar",
+            "menu": false,
+            "messages": false,
+            "permissions": [
+            ],
+            "route": "events",
+            "title": "Calendário"
+        },
+        {
+            "fields": false,
+            "fixed_module": true,
+            "glyphicon": "glyphicon glyphicon-th",
+            "menu": false,
+            "messages": false,
+            "permissions": [
+            ],
+            "route": "indicators",
+            "title": "Indicadores"
+        },
+        {
+            "fields": false,
+            "fixed_module": true,
+            "glyphicon": "glyphicon glyphicon-credit-card",
+            "menu": false,
+            "messages": false,
+            "permissions": [
+            ],
+            "route": "link_pagamento",
+            "title": "GerenciaNet"
+        },
+        {
+            "fields": false,
+            "fixed_module": true,
+            "glyphicon": "glyphicon glyphicon-user",
+            "menu": false,
+            "messages": false,
+            "permissions": [
+            ],
+            "route": "users",
+            "title": "Usuários"
+        },
+        {
+            "fields": false,
+            "fixed_module": true,
+            "glyphicon": "glyphicon glyphicon-lock",
+            "menu": false,
+            "messages": false,
+            "permissions": [
+            ],
+            "route": "profiles",
+            "title": "Perfis de Acesso"
+        },
+        {
+            "fields": false,
+            "fixed_module": true,
+            "glyphicon": "glyphicon glyphicon-list-alt",
+            "menu": false,
+            "messages": false,
+            "permissions": [
+            ],
+            "route": "reports",
+            "title": "Relatórios"
+        },
+        {
+            "fields": false,
+            "fixed_module": true,
+            "glyphicon": "glyphicon glyphicon-tags",
+            "menu": false,
+            "messages": false,
+            "permissions": [
+            ],
+            "route": "logs",
+            "title": "Logs"
+        }
+    ],
+    "name": "Erp lxxxtxx Viagens e Turismo"
+}

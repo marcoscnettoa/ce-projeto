@@ -1,0 +1,56 @@
+.info-box{display:block;min-height:90px;background:#fff;width:100%;box-shadow:0 1px 1px rgba(0,0,0,0.1);border-radius:2px;margin-bottom:15px}
+.info-box small{font-size:14px}
+.info-box .progress{background:rgba(0,0,0,0.2);margin:5px -10px 5px -10px;height:2px}
+.info-box .progress,.info-box .progress .progress-bar{border-radius:0}
+.info-box .progress .progress-bar{background:#fff}
+.info-box-icon{border-top-left-radius:2px;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:2px;display:block;float:left;height:90px;width:90px;text-align:center;font-size:45px;line-height:90px;background:rgba(0,0,0,0.2)}
+.info-box-icon>img{max-width:100%}
+.info-box-content{padding:5px 10px;margin-left:90px}
+.info-box-number{display:block;font-weight:bold;font-size:18px}.progress-description,
+.info-box-text{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.info-box-text{text-transform:uppercase}.info-box-more{display:block}
+
+.jumbotron{
+    padding: 30px;
+    background-color: #fff;
+    margin-bottom:0;
+}
+
+/*.box{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.right-side{
+	margin-left: 130px;
+}*/
+
+#datatable{
+    margin-bottom: 20px;
+}
+
+.right{
+    float: right;
+}
+
+.box{
+	border-top:none !important;
+}
+
+.bgpersonalizado{ background-color: #3c8dbc !important; border-color: #3c8dbc !important; }
+
+/* # - */
+.box-header { padding:15px; }
+.box-body { padding:15px; }
+.btn-default { border-color:#bcbcbc; }
+#section-import { }
+#section-import form { text-align:right; }
+#section-import  #r_import_export { }
+#section-import  #r_import_export { text-align:right; }
+#section-import  #r_import_export button { float:none; display:inline-block; margin-left:5px; margin-bottom:5px; }
+#section-import  #r_import_export button strong { font-weight:600; vertical-align:middle; }
+#section-import  #r_import_export #r_import_filtro { /*border-color:#bcbcbc;*/ }
+#section-import  #r_import_export #r_import_filtro strong { vertical-align:middle; }
+#section-import  #r_import_export #r_import_filtro #r_import_filtro_check { vertical-align:middle; margin:0px; margin-right:3px; pointer-events: none; }
+#section-import  #r_export_page { margin-left: 5px; margin-bottom: 5px; vertical-align: middle; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px; background-color: #f4f4f4; border: 1px solid #bcbcbc; font-weight: 600; color: #444; }

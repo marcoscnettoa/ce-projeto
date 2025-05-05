@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="209" height="241" fill="none" viewBox="0 0 209 241">
+    <g filter="url(#filter0_d)">
+        <path fill="url(#paint0_linear)" d="M161.675 102.987h-5.897V81.341C155.778 53.077 132.73 30 104.5 30S53.222 53.077 53.222 81.341v21.646h-5.897c-3.93 0-7.325 3.22-7.325 7.334v73.345c0 3.935 3.216 7.334 7.325 7.334h114.35c3.93 0 7.325-3.22 7.325-7.334v-73.345c0-3.935-3.216-7.334-7.325-7.334zM73.947 81.341c0-16.815 13.758-30.59 30.553-30.59s30.553 13.775 30.553 30.59v21.646H73.947V81.341zm38.057 68.515v15.563c0 4.114-3.395 7.513-7.504 7.513s-7.504-3.399-7.504-7.513v-15.563c-3.395-2.326-5.718-6.44-5.718-10.913 0-7.334 5.896-13.237 13.222-13.237 7.325 0 13.222 5.903 13.222 13.237 0 4.651-2.323 8.587-5.718 10.913z"/>
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear" x1="169" x2="12.753" y1="30" y2="63.511" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0063F7"/>
+            <stop offset="1" stop-color="#9DBFF9"/>
+        </linearGradient>
+        <filter id="filter0_d" width="209" height="241" x="0" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="10"/>
+            <feGaussianBlur stdDeviation="20"/>
+            <feColorMatrix values="0 0 0 0 0.782 0 0 0 0 0.786533 0 0 0 0 0.85 0 0 0 0.5 0"/>
+            <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+        </filter>
+    </defs>
+</svg>

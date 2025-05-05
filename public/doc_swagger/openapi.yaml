@@ -1,0 +1,4436 @@
+openapi: 3.0.0
+info:
+  title: 'Api oAuth 2.0'
+  description: 'Esta é a documentação base da sua API. Ela contém todas as informações necessárias para que você, sua equipe ou um desenvolvedor possam integrar o seu sistema com outros sistemas, sites, portais ou aplicativos móveis (iOS/Android)'
+  version: 2.0.1
+paths:
+  /api/auth/login:
+    post:
+      tags:
+        - Autenticação
+      summary: 'Efetuar login'
+      operationId: dd51a484b7fa0f97c7680fdbde14cf5f
+      requestBody:
+        description: 'Input data format'
+        content:
+          application/json:
+            schema:
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  description: 'Nome de usuário'
+                  type: string
+                password:
+                  description: 'Senha do usuário'
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: 'Login efetuado com sucesso'
+          content:
+            application/json:
+              schema:
+                properties:
+                  access_token: { description: 'Access Token de autenticação', type: string }
+                  refresh_token: { description: 'Refresh Token de autenticação', type: string }
+                  expires_at: { description: 'Expiração do access_token', type: integer }
+                  id: { description: 'ID do usuário', type: integer }
+                  name: { description: 'Nome do usuário', type: string }
+                  username: { description: 'Login de acesso do usuário', type: string }
+                  email: { description: 'E-mail do usuário', type: string }
+                  image: { description: 'Imagem de perfil do usuário', type: string }
+                  created_at: { description: 'Data de criação do usuário', type: string }
+                type: object
+  /api/auth/refresh/token:
+    post:
+      tags:
+        - Autenticação
+      summary: 'Efetuar troca autenticação login'
+      operationId: cafdbd0001a328d9de6de5e064d58bf4
+      requestBody:
+        description: 'Input data format'
+        content:
+          application/json:
+            schema:
+              required:
+                - refresh_token
+              properties:
+                refresh_token:
+                  description: 'Refresh Token recebido na Autenticação'
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: 'Renovar token autenticação/login'
+          content:
+            application/json:
+              schema:
+                properties:
+                  access_token: { description: 'Access Token de autenticação', type: string }
+                  refresh_token: { description: 'Refresh Token de autenticação', type: string }
+                  expires_at: { description: 'Expiração do access_token', type: integer }
+                  id: { description: 'ID do usuário', type: integer }
+                  name: { description: 'Nome do usuário', type: string }
+                  username: { description: 'Login de acesso do usuário', type: string }
+                  email: { description: 'E-mail do usuário', type: string }
+                  image: { description: 'Imagem de perfil do usuário', type: string }
+                  created_at: { description: 'Data de criação do usuário', type: string }
+                type: object
+  /api/cadastro_de_empresas:
+    get:
+      tags:
+        - CadastroDeEmpresas
+      summary: Listar
+      operationId: de3695cf53635264b264e7c0be6ac1b2
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - CadastroDeEmpresas
+      summary: Cadastrar
+      operationId: 7579a23852f2279b7d4a3a5f3562ff74
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                logotipo_empresa:
+                  description: 'Logotipo Empresa'
+                  type: string
+                dados_da_empresa:
+                  description: 'Dados da Empresa'
+                  type: string
+                codigo_empresa:
+                  description: 'Codigo Empresa'
+                  type: string
+                nome_da_empresa:
+                  description: 'Nome da Empresa'
+                  type: string
+                njuntacomercial_empresa:
+                  description: 'NJuntaComercial Empresa'
+                  type: string
+                perfil_fiscal:
+                  description: 'Perfil Fiscal'
+                  type: string
+                nome_fantasia_empresa:
+                  description: 'Nome Fantasia  Empresa'
+                  type: string
+                cnpj_da_empresa:
+                  description: 'CNPJ da Empresa'
+                  type: string
+                inscricao_estadual:
+                  description: 'Inscrição Estadual'
+                  type: string
+                email_empresa:
+                  description: 'Email Empresa'
+                  type: string
+                dados_de_endereco:
+                  description: 'Dados de Endereço'
+                  type: string
+                cep_empresa:
+                  description: 'CEP Empresa'
+                  type: string
+                endereco_empresa:
+                  description: 'Endereço Empresa'
+                  type: string
+                numero_empresa:
+                  description: 'Número Empresa'
+                  type: string
+                bairro_empresa:
+                  description: 'Bairro Empresa'
+                  type: string
+                pais_empresa:
+                  description: 'Pais Empresa'
+                  type: string
+                uf_empresa:
+                  description: 'UF Empresa'
+                  type: string
+                cidade_empresa:
+                  description: 'Cidade Empresa'
+                  type: string
+                dados_para_contato:
+                  description: 'Dados para Contato'
+                  type: string
+                telefone_empresa:
+                  description: 'Telefone Empresa'
+                  type: string
+                fax_empresa:
+                  description: 'Fax Empresa'
+                  type: string
+                site_empresa:
+                  description: 'Site Empresa'
+                  type: string
+                nre_empresa:
+                  description: 'NRE Empresa'
+                  type: string
+                segmento:
+                  description: Segmento
+                  type: string
+                comercio:
+                  description: Comércio
+                  type: string
+                servico:
+                  description: Serviço
+                  type: string
+                industria:
+                  description: Indústria
+                  type: string
+                importador:
+                  description: Importador
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/cadastro_de_empresas/{id}':
+    get:
+      tags:
+        - CadastroDeEmpresas
+      summary: Retornar
+      operationId: b0f720c238477529ab87c55d27649c99
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - CadastroDeEmpresas
+      summary: Atualizar
+      operationId: f8356b944c3999b70912c2775cbbbc3e
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                logotipo_empresa:
+                  description: 'Logotipo Empresa'
+                  type: string
+                dados_da_empresa:
+                  description: 'Dados da Empresa'
+                  type: string
+                codigo_empresa:
+                  description: 'Codigo Empresa'
+                  type: string
+                nome_da_empresa:
+                  description: 'Nome da Empresa'
+                  type: string
+                njuntacomercial_empresa:
+                  description: 'NJuntaComercial Empresa'
+                  type: string
+                perfil_fiscal:
+                  description: 'Perfil Fiscal'
+                  type: string
+                nome_fantasia_empresa:
+                  description: 'Nome Fantasia  Empresa'
+                  type: string
+                cnpj_da_empresa:
+                  description: 'CNPJ da Empresa'
+                  type: string
+                inscricao_estadual:
+                  description: 'Inscrição Estadual'
+                  type: string
+                email_empresa:
+                  description: 'Email Empresa'
+                  type: string
+                dados_de_endereco:
+                  description: 'Dados de Endereço'
+                  type: string
+                cep_empresa:
+                  description: 'CEP Empresa'
+                  type: string
+                endereco_empresa:
+                  description: 'Endereço Empresa'
+                  type: string
+                numero_empresa:
+                  description: 'Número Empresa'
+                  type: string
+                bairro_empresa:
+                  description: 'Bairro Empresa'
+                  type: string
+                pais_empresa:
+                  description: 'Pais Empresa'
+                  type: string
+                uf_empresa:
+                  description: 'UF Empresa'
+                  type: string
+                cidade_empresa:
+                  description: 'Cidade Empresa'
+                  type: string
+                dados_para_contato:
+                  description: 'Dados para Contato'
+                  type: string
+                telefone_empresa:
+                  description: 'Telefone Empresa'
+                  type: string
+                fax_empresa:
+                  description: 'Fax Empresa'
+                  type: string
+                site_empresa:
+                  description: 'Site Empresa'
+                  type: string
+                nre_empresa:
+                  description: 'NRE Empresa'
+                  type: string
+                segmento:
+                  description: Segmento
+                  type: string
+                comercio:
+                  description: Comércio
+                  type: string
+                servico:
+                  description: Serviço
+                  type: string
+                industria:
+                  description: Indústria
+                  type: string
+                importador:
+                  description: Importador
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - CadastroDeEmpresas
+      summary: Deletar
+      operationId: 7d6b77d6953c653c44b7c48cced4b8a7
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/cadastros:
+    get:
+      tags:
+        - Cadastros
+      summary: Listar
+      operationId: 2bc1f4625a7b11186f4b88b9c142c10e
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Cadastros
+      summary: Cadastrar
+      operationId: 1b7165e38f29db567d3068ee20b9ac52
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema: {  }
+      responses:
+        '201':
+          description: ''
+  '/api/cadastros/{id}':
+    get:
+      tags:
+        - Cadastros
+      summary: Retornar
+      operationId: 54843c7f41d795c7618287e155fd34e1
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Cadastros
+      summary: Atualizar
+      operationId: 18f95abcf6eee3873a1a7cd20498db24
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema: {  }
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Cadastros
+      summary: Deletar
+      operationId: 95fcdd8f37a8bf8d8a83ffd7b103ae0e
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/ccf_cartao_de_credito:
+    get:
+      tags:
+        - CcfCartaoDeCredito
+      summary: Listar
+      operationId: 099c31a07bbfcbba5beb9bd2e7582f42
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - CcfCartaoDeCredito
+      summary: Cadastrar
+      operationId: ec99f39ae8ef82c96752539341372c2a
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                bandeira_do_cartao_:
+                  description: 'BANDEIRA DO CARTÃO:'
+                  type: string
+                visa_:
+                  description: 'Visa:'
+                  type: string
+                mastercard_:
+                  description: 'Mastercard:'
+                  type: string
+                diners_:
+                  description: 'Diners:'
+                  type: string
+                outros:
+                  description: Outros
+                  type: string
+                dados_do_cartao_:
+                  description: 'DADOS DO CARTÃO:'
+                  type: string
+                numero_do_cartao_:
+                  description: 'Número do Cartão:'
+                  type: string
+                codigo_de_verificacao_:
+                  description: 'Código de Verificação:'
+                  type: string
+                data_de_validade_cartao_:
+                  description: 'Data de Validade Cartão:'
+                  type: string
+                nome_do_titular_:
+                  description: 'Nome do Titular:'
+                  type: string
+                cpf_:
+                  description: 'CPF:'
+                  type: string
+                nro_do_telefone_do_responsavel_:
+                  description: 'Nro do Telefone do Responsável:'
+                  type: string
+                valores_e_condicoes_:
+                  description: 'VALORES E CONDIÇÕES:'
+                  type: string
+                valor_total_:
+                  description: 'Valor Total:'
+                  type: string
+                nro_de_parcelas_:
+                  description: 'Nro de Parcelas:'
+                  type: string
+                valor_da_parcela_:
+                  description: 'Valor da Parcela:'
+                  type: string
+                importante_:
+                  description: 'IMPORTANTE:'
+                  type: string
+                esta_autorizacao_destina_se_ao_pagamento_em_nome_de_:
+                  description: 'Esta autorização destina-se ao pagamento em nome de:'
+                  type: string
+                nro_telefone_passageiro_:
+                  description: 'Nro. Telefone Passageiro:'
+                  type: string
+                cia_aerea_:
+                  description: 'Cia Aérea:'
+                  type: string
+                data_de_embarque_:
+                  description: 'Data de Embarque:'
+                  type: string
+                destino_:
+                  description: 'Destino:'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/ccf_cartao_de_credito/{id}':
+    get:
+      tags:
+        - CcfCartaoDeCredito
+      summary: Retornar
+      operationId: dbd5901058b1cc52bc8afc5bb221e6fc
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - CcfCartaoDeCredito
+      summary: Atualizar
+      operationId: e2751e98bc536c27f809cae70b9aa6bf
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                bandeira_do_cartao_:
+                  description: 'BANDEIRA DO CARTÃO:'
+                  type: string
+                visa_:
+                  description: 'Visa:'
+                  type: string
+                mastercard_:
+                  description: 'Mastercard:'
+                  type: string
+                diners_:
+                  description: 'Diners:'
+                  type: string
+                outros:
+                  description: Outros
+                  type: string
+                dados_do_cartao_:
+                  description: 'DADOS DO CARTÃO:'
+                  type: string
+                numero_do_cartao_:
+                  description: 'Número do Cartão:'
+                  type: string
+                codigo_de_verificacao_:
+                  description: 'Código de Verificação:'
+                  type: string
+                data_de_validade_cartao_:
+                  description: 'Data de Validade Cartão:'
+                  type: string
+                nome_do_titular_:
+                  description: 'Nome do Titular:'
+                  type: string
+                cpf_:
+                  description: 'CPF:'
+                  type: string
+                nro_do_telefone_do_responsavel_:
+                  description: 'Nro do Telefone do Responsável:'
+                  type: string
+                valores_e_condicoes_:
+                  description: 'VALORES E CONDIÇÕES:'
+                  type: string
+                valor_total_:
+                  description: 'Valor Total:'
+                  type: string
+                nro_de_parcelas_:
+                  description: 'Nro de Parcelas:'
+                  type: string
+                valor_da_parcela_:
+                  description: 'Valor da Parcela:'
+                  type: string
+                importante_:
+                  description: 'IMPORTANTE:'
+                  type: string
+                esta_autorizacao_destina_se_ao_pagamento_em_nome_de_:
+                  description: 'Esta autorização destina-se ao pagamento em nome de:'
+                  type: string
+                nro_telefone_passageiro_:
+                  description: 'Nro. Telefone Passageiro:'
+                  type: string
+                cia_aerea_:
+                  description: 'Cia Aérea:'
+                  type: string
+                data_de_embarque_:
+                  description: 'Data de Embarque:'
+                  type: string
+                destino_:
+                  description: 'Destino:'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - CcfCartaoDeCredito
+      summary: Deletar
+      operationId: f5f45d047c8bb57574b00e94ba2ca509
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/clientes:
+    get:
+      tags:
+        - Clientes
+      summary: Listar
+      operationId: ba0baeadf0c6364c29574444264d42a9
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Clientes
+      summary: Cadastrar
+      operationId: 76b57402fc9c3664ab78b7f01a5bd0b5
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                dados_do_cliente:
+                  description: 'Dados do Cliente'
+                  type: string
+                codigo_do_cliente:
+                  description: 'Código do Cliente'
+                  type: string
+                cnpj_do_cliente:
+                  description: 'CNPJ do Cliente'
+                  type: string
+                cpf_do_cliente:
+                  description: 'CPF do Cliente'
+                  type: string
+                inscricao_estadual_rg:
+                  description: 'Inscrição Estadual/RG'
+                  type: string
+                nome_do_cliente:
+                  description: 'Nome do Cliente'
+                  type: string
+                fantasia:
+                  description: Fantasia
+                  type: string
+                e_mail:
+                  description: E-mail
+                  type: string
+                observacao:
+                  description: Observação
+                  type: string
+                telefone_1:
+                  description: 'Telefone 1'
+                  type: string
+                telefone_2:
+                  description: 'Telefone 2'
+                  type: string
+                endereco_do_cliente:
+                  description: 'Endereço do Cliente'
+                  type: string
+                cep_do_cliente:
+                  description: 'CEP do Cliente'
+                  type: string
+                endereco:
+                  description: Endereço
+                  type: string
+                numero_:
+                  description: 'Número:'
+                  type: string
+                complemento:
+                  description: Complemento
+                  type: string
+                bairro:
+                  description: Bairro
+                  type: string
+                cidade:
+                  description: Cidade
+                  type: string
+                estado:
+                  description: Estado
+                  type: string
+                ponto_de_referencia:
+                  description: 'Ponto de Referência'
+                  type: string
+                anexos:
+                  description: Anexos
+                  type: string
+                documentos:
+                  description: Documentos
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/clientes/{id}':
+    get:
+      tags:
+        - Clientes
+      summary: Retornar
+      operationId: 5b7642c2c87cd9b50e15f2ab46995f58
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Clientes
+      summary: Atualizar
+      operationId: 28999acfb5b34104224b0cffdc535aa4
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                dados_do_cliente:
+                  description: 'Dados do Cliente'
+                  type: string
+                codigo_do_cliente:
+                  description: 'Código do Cliente'
+                  type: string
+                cnpj_do_cliente:
+                  description: 'CNPJ do Cliente'
+                  type: string
+                cpf_do_cliente:
+                  description: 'CPF do Cliente'
+                  type: string
+                inscricao_estadual_rg:
+                  description: 'Inscrição Estadual/RG'
+                  type: string
+                nome_do_cliente:
+                  description: 'Nome do Cliente'
+                  type: string
+                fantasia:
+                  description: Fantasia
+                  type: string
+                e_mail:
+                  description: E-mail
+                  type: string
+                observacao:
+                  description: Observação
+                  type: string
+                telefone_1:
+                  description: 'Telefone 1'
+                  type: string
+                telefone_2:
+                  description: 'Telefone 2'
+                  type: string
+                endereco_do_cliente:
+                  description: 'Endereço do Cliente'
+                  type: string
+                cep_do_cliente:
+                  description: 'CEP do Cliente'
+                  type: string
+                endereco:
+                  description: Endereço
+                  type: string
+                numero_:
+                  description: 'Número:'
+                  type: string
+                complemento:
+                  description: Complemento
+                  type: string
+                bairro:
+                  description: Bairro
+                  type: string
+                cidade:
+                  description: Cidade
+                  type: string
+                estado:
+                  description: Estado
+                  type: string
+                ponto_de_referencia:
+                  description: 'Ponto de Referência'
+                  type: string
+                anexos:
+                  description: Anexos
+                  type: string
+                documentos:
+                  description: Documentos
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Clientes
+      summary: Deletar
+      operationId: 2d478aea3046a6fa5f629b6a7101033e
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/companhias:
+    get:
+      tags:
+        - Companhias
+      summary: Listar
+      operationId: f95dbca16b88327f70669fd0b80f8f1c
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Companhias
+      summary: Cadastrar
+      operationId: 7998126afec7d1b4625f5269d2822935
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                companhia:
+                  description: Companhia
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/companhias/{id}':
+    get:
+      tags:
+        - Companhias
+      summary: Retornar
+      operationId: aba0b4ce2a43560e8970fbe35f382ea0
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Companhias
+      summary: Atualizar
+      operationId: 28567784929bc69a10e67c4e535a5d41
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                companhia:
+                  description: Companhia
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Companhias
+      summary: Deletar
+      operationId: e65185b1a38cc1cc7d19b561ab8b2833
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/contas_a_pagar:
+    get:
+      tags:
+        - ContasAPagar
+      summary: Listar
+      operationId: fbef90477ba964ca006a40568cb18e4b
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - ContasAPagar
+      summary: Cadastrar
+      operationId: 87a1d43d14d9f9cfe6d55a459d6668ae
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                referente_a:
+                  description: 'Referente à'
+                  type: string
+                fornecedor:
+                  description: Fornecedor
+                  type: string
+                tipo_de_documento:
+                  description: 'Tipo de documento'
+                  type: string
+                n_do_documento:
+                  description: 'N° do documento'
+                  type: string
+                portador:
+                  description: Portador
+                  type: string
+                descricao_do_pagamento:
+                  description: 'Descrição do Pagamento'
+                  type: string
+                n_da_ordem_de_compra:
+                  description: 'N° da ordem de compra'
+                  type: string
+                data_do_vencimento:
+                  description: 'Data do Vencimento'
+                  type: string
+                valor_a_pagar:
+                  description: 'Valor à Pagar'
+                  type: string
+                tipo_do_valor:
+                  description: 'Tipo do valor'
+                  type: string
+                parcelas:
+                  description: Parcelas
+                  type: string
+                n_de_parcelas:
+                  description: 'N° de Parcelas'
+                  type: string
+                primeira_data:
+                  description: 'Primeira Data'
+                  type: string
+                recepcao:
+                  description: Recepção
+                  type: string
+                data_do_pagamento:
+                  description: 'Data do Pagamento'
+                  type: string
+                valor_pago:
+                  description: 'Valor Pago'
+                  type: string
+                forma_de_pagamento:
+                  description: 'Forma de pagamento'
+                  type: string
+                status:
+                  description: Status
+                  type: string
+                comprovante_de_pagamento:
+                  description: 'Comprovante de Pagamento'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/contas_a_pagar/{id}':
+    get:
+      tags:
+        - ContasAPagar
+      summary: Retornar
+      operationId: 77228405caa266909d52056884bd0db9
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - ContasAPagar
+      summary: Atualizar
+      operationId: a34dd849c8edeaff21207c96d1eadfaa
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                referente_a:
+                  description: 'Referente à'
+                  type: string
+                fornecedor:
+                  description: Fornecedor
+                  type: string
+                tipo_de_documento:
+                  description: 'Tipo de documento'
+                  type: string
+                n_do_documento:
+                  description: 'N° do documento'
+                  type: string
+                portador:
+                  description: Portador
+                  type: string
+                descricao_do_pagamento:
+                  description: 'Descrição do Pagamento'
+                  type: string
+                n_da_ordem_de_compra:
+                  description: 'N° da ordem de compra'
+                  type: string
+                data_do_vencimento:
+                  description: 'Data do Vencimento'
+                  type: string
+                valor_a_pagar:
+                  description: 'Valor à Pagar'
+                  type: string
+                tipo_do_valor:
+                  description: 'Tipo do valor'
+                  type: string
+                parcelas:
+                  description: Parcelas
+                  type: string
+                n_de_parcelas:
+                  description: 'N° de Parcelas'
+                  type: string
+                primeira_data:
+                  description: 'Primeira Data'
+                  type: string
+                recepcao:
+                  description: Recepção
+                  type: string
+                data_do_pagamento:
+                  description: 'Data do Pagamento'
+                  type: string
+                valor_pago:
+                  description: 'Valor Pago'
+                  type: string
+                forma_de_pagamento:
+                  description: 'Forma de pagamento'
+                  type: string
+                status:
+                  description: Status
+                  type: string
+                comprovante_de_pagamento:
+                  description: 'Comprovante de Pagamento'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - ContasAPagar
+      summary: Deletar
+      operationId: 5d7bff97a2b38e53d0aa1c55eef704b0
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/contas_a_receber:
+    get:
+      tags:
+        - ContasAReceber
+      summary: Listar
+      operationId: 38775853257cbac09e2a2663ea91265d
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - ContasAReceber
+      summary: Cadastrar
+      operationId: e588060a0113a24bcdfe4df19a40fc47
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                empresa:
+                  description: Empresa
+                  type: string
+                cliente:
+                  description: Cliente
+                  type: string
+                tipo_de_documento:
+                  description: 'Tipo de documento'
+                  type: string
+                n_do_documento:
+                  description: 'N° do documento'
+                  type: string
+                vendedor:
+                  description: Vendedor
+                  type: string
+                descricao_do_recebimento:
+                  description: 'Descrição do Recebimento'
+                  type: string
+                data_do_vencimento:
+                  description: 'Data do Vencimento'
+                  type: string
+                valor_a_receber:
+                  description: 'Valor à Receber'
+                  type: string
+                tipo_do_valor:
+                  description: 'Tipo do valor'
+                  type: string
+                parcelas:
+                  description: Parcelas
+                  type: string
+                n_de_parcelas:
+                  description: 'N° de Parcelas'
+                  type: string
+                primeira_data:
+                  description: 'Primeira Data'
+                  type: string
+                recepcao:
+                  description: Recepção
+                  type: string
+                data_do_recebimento:
+                  description: 'Data do Recebimento'
+                  type: string
+                valor_recebido:
+                  description: 'Valor Recebido'
+                  type: string
+                forma_de_pagamento:
+                  description: 'Forma de pagamento'
+                  type: string
+                status:
+                  description: Status
+                  type: string
+                comprovante:
+                  description: Comprovante
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/contas_a_receber/{id}':
+    get:
+      tags:
+        - ContasAReceber
+      summary: Retornar
+      operationId: 6c5584f836dae8ea81dae1b69999e104
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - ContasAReceber
+      summary: Atualizar
+      operationId: 038f5223900bc23dffa5ac298ea69aaa
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                empresa:
+                  description: Empresa
+                  type: string
+                cliente:
+                  description: Cliente
+                  type: string
+                tipo_de_documento:
+                  description: 'Tipo de documento'
+                  type: string
+                n_do_documento:
+                  description: 'N° do documento'
+                  type: string
+                vendedor:
+                  description: Vendedor
+                  type: string
+                descricao_do_recebimento:
+                  description: 'Descrição do Recebimento'
+                  type: string
+                data_do_vencimento:
+                  description: 'Data do Vencimento'
+                  type: string
+                valor_a_receber:
+                  description: 'Valor à Receber'
+                  type: string
+                tipo_do_valor:
+                  description: 'Tipo do valor'
+                  type: string
+                parcelas:
+                  description: Parcelas
+                  type: string
+                n_de_parcelas:
+                  description: 'N° de Parcelas'
+                  type: string
+                primeira_data:
+                  description: 'Primeira Data'
+                  type: string
+                recepcao:
+                  description: Recepção
+                  type: string
+                data_do_recebimento:
+                  description: 'Data do Recebimento'
+                  type: string
+                valor_recebido:
+                  description: 'Valor Recebido'
+                  type: string
+                forma_de_pagamento:
+                  description: 'Forma de pagamento'
+                  type: string
+                status:
+                  description: Status
+                  type: string
+                comprovante:
+                  description: Comprovante
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - ContasAReceber
+      summary: Deletar
+      operationId: 4f013c593ffd857a8fc859f4fe1fa983
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/faturamento:
+    get:
+      tags:
+        - Faturamento
+      summary: Listar
+      operationId: 9dd7a441a337c6649ccaff461904cbbb
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Faturamento
+      summary: Cadastrar
+      operationId: bdccb148065478870549c7c9aae14bb1
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                n_da_fatura:
+                  description: 'N° da Fatura'
+                  type: string
+                data_da_fatura:
+                  description: 'Data da Fatura'
+                  type: string
+                data_de_vencimento:
+                  description: 'Data de Vencimento'
+                  type: string
+                lancamento:
+                  description: Lançamento
+                  type: string
+                cliente:
+                  description: Cliente
+                  type: string
+                data_inicial:
+                  description: 'Data Inicial'
+                  type: string
+                data_final:
+                  description: 'Data Final'
+                  type: string
+                template:
+                  description: Template
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/faturamento/{id}':
+    get:
+      tags:
+        - Faturamento
+      summary: Retornar
+      operationId: 4367e8e0e8f64f706a63ca465e3ef94c
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Faturamento
+      summary: Atualizar
+      operationId: f122401b65cb3647f280c6c99b68bd78
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                n_da_fatura:
+                  description: 'N° da Fatura'
+                  type: string
+                data_da_fatura:
+                  description: 'Data da Fatura'
+                  type: string
+                data_de_vencimento:
+                  description: 'Data de Vencimento'
+                  type: string
+                lancamento:
+                  description: Lançamento
+                  type: string
+                cliente:
+                  description: Cliente
+                  type: string
+                data_inicial:
+                  description: 'Data Inicial'
+                  type: string
+                data_final:
+                  description: 'Data Final'
+                  type: string
+                template:
+                  description: Template
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Faturamento
+      summary: Deletar
+      operationId: 06e52594d2cd84012118723bdd3e039a
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/financeiro:
+    get:
+      tags:
+        - Financeiro
+      summary: Listar
+      operationId: 3307a46df0686644ad55e8c6b8eb23c2
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Financeiro
+      summary: Cadastrar
+      operationId: 9bd840256ac8512f66df62ed7b1c11ea
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema: {  }
+      responses:
+        '201':
+          description: ''
+  '/api/financeiro/{id}':
+    get:
+      tags:
+        - Financeiro
+      summary: Retornar
+      operationId: 2bffa669fed333dadea8438c0ac15f4a
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Financeiro
+      summary: Atualizar
+      operationId: ae16cf1370906abdbeb87c9382fd936c
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema: {  }
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Financeiro
+      summary: Deletar
+      operationId: f07d5d0162d3f235ef70dfcd6d42c128
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/fluxo_de_caixa:
+    get:
+      tags:
+        - FluxoDeCaixa
+      summary: Listar
+      operationId: b2b8cfda1823074832fed5af72a86cb4
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - FluxoDeCaixa
+      summary: Cadastrar
+      operationId: 703b139ed5c38471890eef92f12be6be
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                saldo_inicial:
+                  description: 'Saldo Inicial'
+                  type: string
+                movimentacao:
+                  description: Movimentação
+                  type: string
+                recebimentos:
+                  description: Recebimentos
+                  type: string
+                data_do_recebimento:
+                  description: 'Data do Recebimento'
+                  type: string
+                valor_recebido:
+                  description: 'Valor Recebido'
+                  type: string
+                pagamentos:
+                  description: Pagamentos
+                  type: string
+                data_do_pagamento:
+                  description: 'Data do Pagamento'
+                  type: string
+                total_a_pagar:
+                  description: 'Total a Pagar'
+                  type: string
+                total:
+                  description: Total
+                  type: string
+                data_atual:
+                  description: 'Data Atual'
+                  type: string
+                ghost_camp:
+                  description: 'Ghost camp'
+                  type: string
+                saldo_da_transacao:
+                  description: 'Saldo da Transação'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/fluxo_de_caixa/{id}':
+    get:
+      tags:
+        - FluxoDeCaixa
+      summary: Retornar
+      operationId: 3f7b0136a11646a177688b896265f27f
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - FluxoDeCaixa
+      summary: Atualizar
+      operationId: 5abe74d91b2ed392b9c57f5dc3d8d701
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                saldo_inicial:
+                  description: 'Saldo Inicial'
+                  type: string
+                movimentacao:
+                  description: Movimentação
+                  type: string
+                recebimentos:
+                  description: Recebimentos
+                  type: string
+                data_do_recebimento:
+                  description: 'Data do Recebimento'
+                  type: string
+                valor_recebido:
+                  description: 'Valor Recebido'
+                  type: string
+                pagamentos:
+                  description: Pagamentos
+                  type: string
+                data_do_pagamento:
+                  description: 'Data do Pagamento'
+                  type: string
+                total_a_pagar:
+                  description: 'Total a Pagar'
+                  type: string
+                total:
+                  description: Total
+                  type: string
+                data_atual:
+                  description: 'Data Atual'
+                  type: string
+                ghost_camp:
+                  description: 'Ghost camp'
+                  type: string
+                saldo_da_transacao:
+                  description: 'Saldo da Transação'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - FluxoDeCaixa
+      summary: Deletar
+      operationId: 52c7ffd033c86d11f0220dd8a26a96af
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/formas_de_pagamentos:
+    get:
+      tags:
+        - FormasDePagamentos
+      summary: Listar
+      operationId: 934ceadf6dd85c1270b59d9685543584
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - FormasDePagamentos
+      summary: Cadastrar
+      operationId: c98ba7e3df5bd924be47d304f8006d84
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                forma_de_pagamento:
+                  description: 'Forma de pagamento'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/formas_de_pagamentos/{id}':
+    get:
+      tags:
+        - FormasDePagamentos
+      summary: Retornar
+      operationId: 73ca9bbc0835460974e8969b8f96b0ca
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - FormasDePagamentos
+      summary: Atualizar
+      operationId: 57bee54ef6f77ad09d4b6c928e88db14
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                forma_de_pagamento:
+                  description: 'Forma de pagamento'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - FormasDePagamentos
+      summary: Deletar
+      operationId: 4ed5805b9fe5bca59b21243852ca1334
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/fornecedores:
+    get:
+      tags:
+        - Fornecedores
+      summary: Listar
+      operationId: 3329e49e14283e8b5d6c4de544bfcb76
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Fornecedores
+      summary: Cadastrar
+      operationId: d9909163f7f9d01399b07eb495f086c0
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                fornecedor:
+                  description: Fornecedor
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/fornecedores/{id}':
+    get:
+      tags:
+        - Fornecedores
+      summary: Retornar
+      operationId: a0e97f4d241338bf7ca2863e59096c78
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Fornecedores
+      summary: Atualizar
+      operationId: 719d568cb4b36f662ae9b23288c4c4b9
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                fornecedor:
+                  description: Fornecedor
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Fornecedores
+      summary: Deletar
+      operationId: d42341682ad2e53713f76cf7c8410df3
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/orcamentos:
+    get:
+      tags:
+        - Orcamentos
+      summary: Listar
+      operationId: 1e94ed5378a0a9a26dec4163f45d45be
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Orcamentos
+      summary: Cadastrar
+      operationId: e2083566df2854a5b22c9854e09dd2f1
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                numero:
+                  description: Número
+                  type: string
+                data:
+                  description: Data
+                  type: string
+                clilente:
+                  description: Clilente
+                  type: string
+                vendedor:
+                  description: Vendedor
+                  type: string
+                produto:
+                  description: Produto
+                  type: string
+                periodo_de:
+                  description: 'Período de'
+                  type: string
+                a:
+                  description: A
+                  type: string
+                viajantes:
+                  description: Viajantes
+                  type: string
+                criancas:
+                  description: Crianças
+                  type: string
+                idade:
+                  description: Idade
+                  type: string
+                malas_despachadas:
+                  description: 'MALAS DESPACHADAS'
+                  type: string
+                inclui:
+                  description: Inclui
+                  type: string
+                nao_inclui:
+                  description: 'Não inclui'
+                  type: string
+                valor_por_passageiro:
+                  description: 'VALOR POR PASSAGEIRO'
+                  type: string
+                passageiros:
+                  description: Passageiros
+                  type: string
+                quantidade:
+                  description: Quantidade
+                  type: string
+                valor_por_pessoa:
+                  description: 'Valor por pessoa'
+                  type: string
+                valor_total:
+                  description: 'Valor total'
+                  type: string
+                outros_servicos:
+                  description: 'OUTROS SERVIÇOS'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/orcamentos/{id}':
+    get:
+      tags:
+        - Orcamentos
+      summary: Retornar
+      operationId: a45e659a2f22f05beb70cfba417ef4cd
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Orcamentos
+      summary: Atualizar
+      operationId: 91cbd12ed12113d5d86097faec2ad304
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                numero:
+                  description: Número
+                  type: string
+                data:
+                  description: Data
+                  type: string
+                clilente:
+                  description: Clilente
+                  type: string
+                vendedor:
+                  description: Vendedor
+                  type: string
+                produto:
+                  description: Produto
+                  type: string
+                periodo_de:
+                  description: 'Período de'
+                  type: string
+                a:
+                  description: A
+                  type: string
+                viajantes:
+                  description: Viajantes
+                  type: string
+                criancas:
+                  description: Crianças
+                  type: string
+                idade:
+                  description: Idade
+                  type: string
+                malas_despachadas:
+                  description: 'MALAS DESPACHADAS'
+                  type: string
+                inclui:
+                  description: Inclui
+                  type: string
+                nao_inclui:
+                  description: 'Não inclui'
+                  type: string
+                valor_por_passageiro:
+                  description: 'VALOR POR PASSAGEIRO'
+                  type: string
+                passageiros:
+                  description: Passageiros
+                  type: string
+                quantidade:
+                  description: Quantidade
+                  type: string
+                valor_por_pessoa:
+                  description: 'Valor por pessoa'
+                  type: string
+                valor_total:
+                  description: 'Valor total'
+                  type: string
+                outros_servicos:
+                  description: 'OUTROS SERVIÇOS'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Orcamentos
+      summary: Deletar
+      operationId: 0b67f3d02c93706e7e13edd7ad8bd923
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/passageiro:
+    get:
+      tags:
+        - Passageiro
+      summary: Listar
+      operationId: 7d684be14f55866ba1b26e875007b8b3
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Passageiro
+      summary: Cadastrar
+      operationId: 9490c455e66a5c35e2741de0bbb4aec4
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                dados_do_passageiro:
+                  description: 'Dados do Passageiro'
+                  type: string
+                nome:
+                  description: Nome
+                  type: string
+                cpf:
+                  description: CPF
+                  type: string
+                e_mail:
+                  description: E-mail
+                  type: string
+                telefone:
+                  description: Telefone
+                  type: string
+                telefone_2:
+                  description: 'Telefone 2'
+                  type: string
+                passaporte:
+                  description: Passaporte
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/passageiro/{id}':
+    get:
+      tags:
+        - Passageiro
+      summary: Retornar
+      operationId: 1730f04e3eb7265bc47fed9f73918859
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Passageiro
+      summary: Atualizar
+      operationId: 1ade5fc9603cbf9d950bbd8ab8ff2a1f
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                dados_do_passageiro:
+                  description: 'Dados do Passageiro'
+                  type: string
+                nome:
+                  description: Nome
+                  type: string
+                cpf:
+                  description: CPF
+                  type: string
+                e_mail:
+                  description: E-mail
+                  type: string
+                telefone:
+                  description: Telefone
+                  type: string
+                telefone_2:
+                  description: 'Telefone 2'
+                  type: string
+                passaporte:
+                  description: Passaporte
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Passageiro
+      summary: Deletar
+      operationId: 1d4392038119810ebf66afd676ba381d
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  '/api/permissions/user/{id}':
+    get:
+      tags:
+        - 'Permissão de Acesso'
+      summary: 'Listar permissões do usuário'
+      operationId: a7b4ac3ed70b30eac404e92e4ebd0de6
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - 'Permissão de Acesso'
+      summary: 'Alterar permissões do usuário'
+      operationId: 76492792cd15ef30d726f656dc0321d5
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                properties:
+                  role: { description: 'Função/Role do Controller', type: string }
+                  authorized: { description: 'Indica se está autorizado ou não', type: boolean }
+                type: object
+      responses:
+        '200':
+          description: ''
+  '/api/permissions/profile/{profile_id}':
+    get:
+      tags:
+        - 'Permissão de Acesso'
+      summary: 'Listar permissões do perfil de acesso'
+      operationId: bd37e166639f813824a5d73ac2001b10
+      parameters:
+        -
+          name: profile_id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - 'Permissão de Acesso'
+      summary: 'Alterar permissões do perfil de acesso'
+      operationId: bf7b1b37fb76ef1a2df4a6ccb854e493
+      parameters:
+        -
+          name: profile_id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                properties:
+                  role: { description: 'Função/Role do Controller', type: string }
+                  authorized: { description: 'Indica se está autorizado ou não', type: boolean }
+                type: object
+      responses:
+        '200':
+          description: ''
+  /api/produtos:
+    get:
+      tags:
+        - Produtos
+      summary: Listar
+      operationId: 4e44f31c7df5e5da4bb7c853e5396ae1
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Produtos
+      summary: Cadastrar
+      operationId: c0714a29fe17a046dd3aa260961d54c1
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                produto:
+                  description: Produto
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/produtos/{id}':
+    get:
+      tags:
+        - Produtos
+      summary: Retornar
+      operationId: 75f25eff9644d3e89f7d18e3a8036e35
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Produtos
+      summary: Atualizar
+      operationId: a319c3baf11db9a513306549d761a8af
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                produto:
+                  description: Produto
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Produtos
+      summary: Deletar
+      operationId: 53c611ff7b82b5218a7fc59621aaab00
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/profiles:
+    get:
+      tags:
+        - Profiles
+      summary: Listar
+      operationId: 0661956572d2ded8ffabc9504a003e62
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Profiles
+      summary: Cadastrar
+      operationId: 80b51e1c202e47f1094377b0d91e6662
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - name
+              properties:
+                name:
+                  description: name
+                  type: string
+                moderator:
+                  description: moderator
+                  type: integer
+                administrator:
+                  description: administrator
+                  type: integer
+                default:
+                  description: default
+                  type: integer
+                r_auth:
+                  description: r_auth
+                  type: integer
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/profiles/{id}':
+    get:
+      tags:
+        - Profiles
+      summary: Retornar
+      operationId: aa47e07cf22b4b543fdce5efc0b06208
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Profiles
+      summary: Atualizar
+      operationId: 370d3ec6d1d1b51b947b88611901645e
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - name
+              properties:
+                name:
+                  description: name
+                  type: string
+                moderator:
+                  description: moderator
+                  type: integer
+                administrator:
+                  description: administrator
+                  type: integer
+                default:
+                  description: default
+                  type: integer
+                r_auth:
+                  description: r_auth
+                  type: integer
+              type: object
+      responses:
+        '200':
+          description: ''
+    delete:
+      tags:
+        - Profiles
+      summary: Deletar
+      operationId: af1bb1dcc8606f391ef77b4f335ce37c
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+  /api/profiles/default:
+    put:
+      tags:
+        - Profiles
+      summary: 'Atualizar perfil de acesso padrão'
+      operationId: d2c8a9b83128faa6fa11b50dceb6dd84
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          application/json:
+            schema:
+              required:
+                - profile_id
+              properties:
+                profile_id:
+                  description: profile_id
+                  type: integer
+              type: object
+      responses:
+        '200':
+          description: ''
+  /api/r_clientes_documentos:
+    get:
+      tags:
+        - RClientesDocumentos
+      summary: Listar
+      operationId: ed8c0984e760145c1e8bff53268f0aab
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - RClientesDocumentos
+      summary: Cadastrar
+      operationId: 121717a3cb289a3e5f6b1d39ad1bdb86
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                documentos:
+                  description: Documentos
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/r_clientes_documentos/{id}':
+    get:
+      tags:
+        - RClientesDocumentos
+      summary: Retornar
+      operationId: 0e5760c8276f230cd3ca720785381083
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - RClientesDocumentos
+      summary: Atualizar
+      operationId: 8e73f795018e7d8ee9c1a417dcb0201e
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                documentos:
+                  description: Documentos
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - RClientesDocumentos
+      summary: Deletar
+      operationId: ec118f6fdad9cc1f78b16e1053266009
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/servicos:
+    get:
+      tags:
+        - Servicos
+      summary: Listar
+      operationId: aa2f6d42eadc4182ceead963ea326a44
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Servicos
+      summary: Cadastrar
+      operationId: 3bc041991b43ce583aa1b49329de34ab
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                servico:
+                  description: Serviço
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/servicos/{id}':
+    get:
+      tags:
+        - Servicos
+      summary: Retornar
+      operationId: 2292d6074d72f4e3568feca4697c4d5c
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Servicos
+      summary: Atualizar
+      operationId: 96e01086cace9fc86c59defa72531726
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                servico:
+                  description: Serviço
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Servicos
+      summary: Deletar
+      operationId: ffd7a9d002ee740173dce88968f3b2fd
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/setup:
+    get:
+      tags:
+        - Setup
+      summary: 'Setup Inicial'
+      operationId: ed8e18892bd00fb461033820ce9333a7
+      responses:
+        '200':
+          description: 'Recebe informações do setup inicial antes da autenticação'
+          content:
+            application/json:
+              schema:
+                properties:
+                  hash_id: { description: 'Hash ID do sistema/projeto', type: string }
+                  name: { description: 'Nome do sistema', type: string }
+                  register: { description: 'Usuário pode se registrar', type: integer }
+                  preview: { description: 'Ambiente de homologação', type: integer }
+                  s3: { description: 'Código repositório s3', type: string }
+                  s3_url: { description: 'Url repositório s3', type: string }
+                type: object
+  /api/auth/setup:
+    get:
+      tags:
+        - Autenticação
+      summary: 'Autenticação Setup'
+      operationId: 2cd046b8a0b0341651589e58e3064b9f
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: 'Recebe informações do setup e configurações essenciais pela autenticação do usuário disponibilizado.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  hash_id: { description: 'Hash ID do sistema/projeto', type: string }
+                  name: { description: 'Nome do sistema', type: string }
+                  register: { description: 'Usuário pode se registrar', type: integer }
+                  preview: { description: 'Ambiente de homologação', type: integer }
+                  s3: { description: 'Código repositório s3', type: string }
+                  s3_url: { description: 'Url repositório s3', type: string }
+                type: object
+  /api/templates:
+    get:
+      tags:
+        - Templates
+      summary: Listar
+      operationId: d9fe6360534ff132cfc611ee39f73547
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Templates
+      summary: Cadastrar
+      operationId: 5dea86b9efdae065c99d5fdb2489cfc0
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                nome_do_template:
+                  description: 'Nome do Template'
+                  type: string
+                template:
+                  description: Template
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/templates/{id}':
+    get:
+      tags:
+        - Templates
+      summary: Retornar
+      operationId: f56c832b89be36de72942b32f2e99d7b
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Templates
+      summary: Atualizar
+      operationId: 11af926165386f963b1b40e7218c646e
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                nome_do_template:
+                  description: 'Nome do Template'
+                  type: string
+                template:
+                  description: Template
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Templates
+      summary: Deletar
+      operationId: 6d13adfa823d5765fda5d6f5f343e62a
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/trechos:
+    get:
+      tags:
+        - Trechos
+      summary: Listar
+      operationId: bb22df53e1b64fce05de0025ea00b047
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Trechos
+      summary: Cadastrar
+      operationId: 31d80ad2b418e8b3d4cc46dd3a1ecd8e
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                trechos:
+                  description: Trechos
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/trechos/{id}':
+    get:
+      tags:
+        - Trechos
+      summary: Retornar
+      operationId: 46030655304f3e1cd292e2f633617e9d
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Trechos
+      summary: Atualizar
+      operationId: dd201b6f535dd0c2abf035c941b3c401
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                trechos:
+                  description: Trechos
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Trechos
+      summary: Deletar
+      operationId: a86630dd5cfdf859405fdc040b247574
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/users:
+    get:
+      tags:
+        - User
+      summary: Listar
+      operationId: c5ccc940808f87add4da9d1db1317605
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - User
+      summary: Cadastrar
+      operationId: a59166badd097fa85d48322ac7dc8a43
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - name
+                - username
+                - email
+                - password
+              properties:
+                name:
+                  description: name
+                  type: string
+                username:
+                  description: username
+                  type: string
+                password:
+                  description: password
+                  type: string
+                profile_id:
+                  description: profile_id
+                  type: integer
+                profession:
+                  description: profession
+                  type: string
+                email:
+                  description: email
+                  type: string
+                image:
+                  description: image
+                  type: binary
+                r_auth:
+                  description: r_auth
+                  type: integer
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/users/{id}':
+    get:
+      tags:
+        - User
+      summary: Retornar
+      operationId: a26abdbceb32bec895ecd216c1681df2
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - User
+      summary: Atualizar
+      operationId: 1298c460f3a4f4b7e53cc83056f2e006
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - name
+                - username
+                - email
+                - password
+              properties:
+                name:
+                  description: name
+                  type: string
+                username:
+                  description: username
+                  type: string
+                password:
+                  description: password
+                  type: string
+                profile_id:
+                  description: profile_id
+                  type: integer
+                profession:
+                  description: profession
+                  type: string
+                email:
+                  description: email
+                  type: string
+                image:
+                  description: image
+                  type: binary
+                r_auth:
+                  description: r_auth
+                  type: integer
+              type: object
+      responses:
+        '200':
+          description: ''
+    delete:
+      tags:
+        - User
+      summary: Deletar
+      operationId: 4b6978b0d2b12cbeb8f9bf49ba28e84a
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: int
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+  /api/users/password/recovery:
+    post:
+      tags:
+        - User
+      summary: 'Recuperar acesso com e-mail'
+      operationId: 790f21922eee435f3313813750eea8d9
+      requestBody:
+        description: 'Input data format'
+        content:
+          application/json:
+            schema:
+              required:
+                - email
+              properties:
+                email:
+                  description: email
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+  /api/users/password/reset:
+    post:
+      tags:
+        - User
+      summary: 'Alterar senha de acesso'
+      operationId: 9f3be46deff0091fde82c24fd67af1de
+      requestBody:
+        description: 'Input data format'
+        content:
+          application/json:
+            schema:
+              required:
+                - token
+                - email
+                - password
+                - password_confirmation
+              properties:
+                token:
+                  description: token
+                  type: string
+                email:
+                  description: email
+                  type: string
+                password:
+                  description: password
+                  type: string
+                password_confirmation:
+                  description: password_confirmation
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+  /api/vendas:
+    get:
+      tags:
+        - Vendas
+      summary: Listar
+      operationId: 512b9b6c7dfe43d0a486d6ff05ced9dc
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Vendas
+      summary: Cadastrar
+      operationId: 04b96c92f0faad10cbd2a916fee028c1
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                tipo_de_venda:
+                  description: 'Tipo de Venda'
+                  type: string
+                faturamento:
+                  description: Faturamento
+                  type: string
+                foi_faturado:
+                  description: 'Foi Faturado'
+                  type: string
+                informacoes_da_venda_:
+                  description: 'INFORMAÇÕES DA VENDA:'
+                  type: string
+                id:
+                  description: Id
+                  type: string
+                data:
+                  description: Data
+                  type: string
+                cliente:
+                  description: Cliente
+                  type: string
+                vendedor:
+                  description: Vendedor
+                  type: string
+                localizador:
+                  description: Localizador
+                  type: string
+                produto:
+                  description: Produto
+                  type: string
+                servico:
+                  description: Serviço
+                  type: string
+                fornecedor:
+                  description: Fornecedor
+                  type: string
+                companhia:
+                  description: Companhia
+                  type: string
+                trecho:
+                  description: Trecho
+                  type: string
+                data_embarque:
+                  description: 'Data Embarque'
+                  type: string
+                data_retorno:
+                  description: 'Data Retorno'
+                  type: string
+                passageiros:
+                  description: Passageiros
+                  type: string
+                valor_tarifa:
+                  description: 'Valor Tarifa'
+                  type: string
+                tx_embarque:
+                  description: 'Tx. Embarque'
+                  type: string
+                outras_taxas:
+                  description: 'Outras Taxas'
+                  type: string
+                desconto:
+                  description: Desconto
+                  type: string
+                comissao:
+                  description: Comissão
+                  type: string
+                valor_total:
+                  description: 'Valor Total'
+                  type: string
+                observacoes_da_venda_:
+                  description: 'OBSERVACÕES DA VENDA:'
+                  type: string
+                formas_de_pagamento_:
+                  description: 'FORMAS DE PAGAMENTO:'
+                  type: string
+                forma_de_pgto:
+                  description: 'Forma de Pgto'
+                  type: string
+                pgto_ao_fornecedor:
+                  description: 'PGTO AO FORNECEDOR'
+                  type: string
+                dt_pgto_:
+                  description: 'Dt. Pgto:'
+                  type: string
+                nr_documento_:
+                  description: 'Nr. Documento:'
+                  type: string
+                valor_:
+                  description: 'Valor:'
+                  type: string
+                acrescimo_:
+                  description: 'Acréscimo:'
+                  type: string
+                desconto_:
+                  description: 'Desconto:'
+                  type: string
+                vlr_pago_:
+                  description: 'Vlr Pago:'
+                  type: string
+                observacoes_:
+                  description: 'OBSERVAÇÕES:'
+                  type: string
+                template:
+                  description: Template
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/vendas/{id}':
+    get:
+      tags:
+        - Vendas
+      summary: Retornar
+      operationId: c531a1dbe153a1169166098cdd312f42
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Vendas
+      summary: Atualizar
+      operationId: 7a36bb706d83520fb71fa105abd4b617
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                tipo_de_venda:
+                  description: 'Tipo de Venda'
+                  type: string
+                faturamento:
+                  description: Faturamento
+                  type: string
+                foi_faturado:
+                  description: 'Foi Faturado'
+                  type: string
+                informacoes_da_venda_:
+                  description: 'INFORMAÇÕES DA VENDA:'
+                  type: string
+                id:
+                  description: Id
+                  type: string
+                data:
+                  description: Data
+                  type: string
+                cliente:
+                  description: Cliente
+                  type: string
+                vendedor:
+                  description: Vendedor
+                  type: string
+                localizador:
+                  description: Localizador
+                  type: string
+                produto:
+                  description: Produto
+                  type: string
+                servico:
+                  description: Serviço
+                  type: string
+                fornecedor:
+                  description: Fornecedor
+                  type: string
+                companhia:
+                  description: Companhia
+                  type: string
+                trecho:
+                  description: Trecho
+                  type: string
+                data_embarque:
+                  description: 'Data Embarque'
+                  type: string
+                data_retorno:
+                  description: 'Data Retorno'
+                  type: string
+                passageiros:
+                  description: Passageiros
+                  type: string
+                valor_tarifa:
+                  description: 'Valor Tarifa'
+                  type: string
+                tx_embarque:
+                  description: 'Tx. Embarque'
+                  type: string
+                outras_taxas:
+                  description: 'Outras Taxas'
+                  type: string
+                desconto:
+                  description: Desconto
+                  type: string
+                comissao:
+                  description: Comissão
+                  type: string
+                valor_total:
+                  description: 'Valor Total'
+                  type: string
+                observacoes_da_venda_:
+                  description: 'OBSERVACÕES DA VENDA:'
+                  type: string
+                formas_de_pagamento_:
+                  description: 'FORMAS DE PAGAMENTO:'
+                  type: string
+                forma_de_pgto:
+                  description: 'Forma de Pgto'
+                  type: string
+                pgto_ao_fornecedor:
+                  description: 'PGTO AO FORNECEDOR'
+                  type: string
+                dt_pgto_:
+                  description: 'Dt. Pgto:'
+                  type: string
+                nr_documento_:
+                  description: 'Nr. Documento:'
+                  type: string
+                valor_:
+                  description: 'Valor:'
+                  type: string
+                acrescimo_:
+                  description: 'Acréscimo:'
+                  type: string
+                desconto_:
+                  description: 'Desconto:'
+                  type: string
+                vlr_pago_:
+                  description: 'Vlr Pago:'
+                  type: string
+                observacoes_:
+                  description: 'OBSERVAÇÕES:'
+                  type: string
+                template:
+                  description: Template
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Vendas
+      summary: Deletar
+      operationId: b7f04aa190b755445446888174e95ec4
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /api/vendedores:
+    get:
+      tags:
+        - Vendedores
+      summary: Listar
+      operationId: 4bc902ad647fd1794ce1264dfaf8d23d
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Vendedores
+      summary: Cadastrar
+      operationId: 5488c0fec1db908ee5f156205710ebc4
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                dados_do_vendedor:
+                  description: 'Dados do Vendedor'
+                  type: string
+                codigo_do_vendedor:
+                  description: 'Código do Vendedor'
+                  type: string
+                nome_do_vendedor:
+                  description: 'Nome do Vendedor'
+                  type: string
+                cpf_do_vendedor:
+                  description: 'CPF do Vendedor'
+                  type: string
+                e_mail_do_vendedor:
+                  description: 'E-mail do  vendedor'
+                  type: string
+                telefone_1:
+                  description: 'Telefone 1'
+                  type: string
+                observacao:
+                  description: Observação
+                  type: string
+                endereco_do_vendedor:
+                  description: 'Endereço do Vendedor'
+                  type: string
+                cep_do_vendedor:
+                  description: 'CEP do Vendedor'
+                  type: string
+                endereco_d_vendedor:
+                  description: 'Endereço d  Vendedor'
+                  type: string
+                numero_do_endereco_do_vendedor:
+                  description: 'Número do Endereço do vendedor'
+                  type: string
+                complemento_do_vendedor:
+                  description: 'Complemento do vendedor'
+                  type: string
+                bairro_do_vendedor:
+                  description: 'Bairro do Vendedor'
+                  type: string
+                cidade_do_vendedor:
+                  description: 'Cidade do Vendedor'
+                  type: string
+                estado_do_vendedor:
+                  description: 'Estado do Vendedor'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+  '/api/vendedores/{id}':
+    get:
+      tags:
+        - Vendedores
+      summary: Retornar
+      operationId: 1a0c8c2ddbcc606e8f49435367cc6d1a
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - Vendedores
+      summary: Atualizar
+      operationId: 51ca7cfc524006925a209fea59354b73
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input data format'
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                dados_do_vendedor:
+                  description: 'Dados do Vendedor'
+                  type: string
+                codigo_do_vendedor:
+                  description: 'Código do Vendedor'
+                  type: string
+                nome_do_vendedor:
+                  description: 'Nome do Vendedor'
+                  type: string
+                cpf_do_vendedor:
+                  description: 'CPF do Vendedor'
+                  type: string
+                e_mail_do_vendedor:
+                  description: 'E-mail do  vendedor'
+                  type: string
+                telefone_1:
+                  description: 'Telefone 1'
+                  type: string
+                observacao:
+                  description: Observação
+                  type: string
+                endereco_do_vendedor:
+                  description: 'Endereço do Vendedor'
+                  type: string
+                cep_do_vendedor:
+                  description: 'CEP do Vendedor'
+                  type: string
+                endereco_d_vendedor:
+                  description: 'Endereço d  Vendedor'
+                  type: string
+                numero_do_endereco_do_vendedor:
+                  description: 'Número do Endereço do vendedor'
+                  type: string
+                complemento_do_vendedor:
+                  description: 'Complemento do vendedor'
+                  type: string
+                bairro_do_vendedor:
+                  description: 'Bairro do Vendedor'
+                  type: string
+                cidade_do_vendedor:
+                  description: 'Cidade do Vendedor'
+                  type: string
+                estado_do_vendedor:
+                  description: 'Estado do Vendedor'
+                  type: string
+              type: object
+      responses:
+        '201':
+          description: ''
+    delete:
+      tags:
+        - Vendedores
+      summary: Deletar
+      operationId: 65f47b24066913429ca33086f8565c27
+      parameters:
+        -
+          name: Authorization
+          in: header
+          required: true
+          schema:
+            description: 'Bearer token para autorização'
+            type: string
+            default: 'Bearer <token>'
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''

@@ -1,0 +1,24 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/xxxxrxxxintegraofficecommandline:$SHORT_SHA', '.']
+images:
+- 'gcr.io/$PROJECT_ID/xxxxrxxxintegraofficecommandline:$SHORT_SHA'
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'xxxxrxxxintegraofficecommandline'
+  - '--image'
+  - 'gcr.io/$PROJECT_ID/xxxxrxxxintegraofficecommandline:$SHORT_SHA'
+  - '--region'
+  - 'us-central1'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
+
+  #gcloud beta builds triggers create github \
+  #  --repo-name=Rxxxappsuseast1 \
+  #  --repo-owner=mffonseca \
+  #  --branch-pattern="^master$" \
+  #  --build-config=cloudbuild.yaml
